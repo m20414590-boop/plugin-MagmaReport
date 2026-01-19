@@ -1,0 +1,65 @@
+# ===============================
+# MagmaReport configuration
+# created by t.me/DevMagma
+# ===============================
+
+permissions:
+  report: "magmareport.use" #Использовать репорт (отправка)
+  view: "magmareport.view" #Смотреть репорты
+  notify: "magmareport.notify" #Уведомление на репорты
+
+gui:
+  title: "§8✦ §cРепорты §8✦"
+  size: 54
+
+report-item:
+  material: PAPER
+  name: "§c🚨 Создать репорт"
+  lore:
+    - "§8━━━━━━━━━━━━━━━━"
+    - "§7Нажмите, чтобы"
+    - "§7отправить репорт"
+    - ""
+    - "§f• §cИгрок"
+    - "§f• §cПричина"
+    - ""
+    - "§a▶ Нажмите"
+    - "§8━━━━━━━━━━━━━━━━"
+    -
+
+refresh-button:
+  slot: 49
+  material: EMERALD
+  name: "&aОбновить"
+  lore:
+    - "&7Нажмите, чтобы обновить"
+
+auto-clean: #автоматическая очистка репортов
+  enabled: true
+  minutes: 60
+
+telegram: #Репорты который отправляются в ТГ-Бота
+  enabled: true
+  bot-token: "ВСТАВЬ_НОВЫЙ_ТОКЕН_БОТА"
+  chat-id: "ТВОЙ_АЙДИ_ТГ"
+
+  format:
+    - "🚨 *Новый репорт*"
+    - ""
+    - "👤 От: `%reporter%`"
+    - "🎯 На: `%target%`"
+    - "📄 Причина:"
+    - "%reason%"
+
+report-stats:
+  permissions:
+    self: "magmareport.stats.self"
+    other: "magmareport.stats.other"
+
+  messages:
+    no-permission: "&cУ вас нет прав."
+    player-not-found: "&cИгрок не найден."
+    header: "&6&lСтатистика модератора: &e%moderator%"
+    closed: "&7Закрыто репортов: &a%closed%"
+    spectated: "&7Слежек за игроками: &a%spectated%"
+
